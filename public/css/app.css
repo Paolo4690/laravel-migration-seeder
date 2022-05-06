@@ -1,0 +1,54 @@
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: #000;
+  color: rgb(243, 146, 34);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+body h1 {
+  text-align: center;
+}
+
+body table {
+  width: 100%;
+}
+
+body table thead {
+  text-align: left;
+}
+
+body ol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 1rem;
+}
+
+body ol li {
+  border-bottom: 1px solid #777;
+  padding: 0.4rem 0;
+  flex: 0 0 15%;
+}
+
+body nav ul {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+body nav ul li {
+  display: inline;
+}
+
+body nav ul li a {
+  color: rgb(243, 146, 34);
+  text-decoration: none;
+}
+
+body nav ul li a:hover {
+  color: rgb(255, 255, 255);
+}
+

@@ -4,13 +4,42 @@
 
 @section('main')
     <h1>Lista treni</h1>
-    <ol>
-        @foreach ($trains as $train)
-            <li>
-                    {{ $train->agency }} - {{ $train->departore_station }} - {{ $train->arrival_station }} - {{ $train->departure_time }} - {{ $train->arrival_time }} - {{ $train->train_code }} - {{ $train->carriages }} - {{ $train->in_time }} - {{ $train->deleted }}
-            </li>
-        @endforeach
-    </ol>
-@endsection
+    <table>
+        <thead>
+            <tr>
+                <th>Azienda</th>
+                <th>N.</th>
+                <th>Partenza</th>
+                <th>Orario</th>
+                <th>Ritardo</th>
+                <th>cancellato</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($trains as $train)
+                <tr>
+                    <td>{{ $train->agency }}</td>
+                    <td>{{ $train->train_code }}</td>
+                    <td>{{ $train->departure_station }}</td>
+                    <td>{{ $train->departure_time }}</td>
+                    <td>
+                        @if ($train->in_time)
+                            &check;
+                        @else
+                            &cross;
+                        @endif
+                    </td>
+                    <td>
+                        @if ($train->deleted)
+                            &check;
+                        @else
+                            &cross;
+                        @endif
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 
-{{ $trains->links() }}
+    {{ $trains->links() }}
+@endsection
