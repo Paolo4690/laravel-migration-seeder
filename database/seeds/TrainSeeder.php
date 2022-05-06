@@ -22,7 +22,7 @@ class TrainSeeder extends Seeder
                 'arrival_times'     => $faker->dateTimeBetween('+1 day', '+2 day'),
                 'train_code'        => $faker->randomNumber(5),
                 'carriages'         => $faker->randomNumber(2),
-                'in_time'           => $faker->numberBetween(0, 1),
+                'in_time'           => $faker->numberBetween(0, 40),
                 'deleted'           => $faker->numberBetween(0, 1),
             ];
 

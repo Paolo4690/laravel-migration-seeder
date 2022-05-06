@@ -12,20 +12,13 @@ body {
         thead {
             text-align: left;
         }
+        tbody {
+            td {
+                border-bottom: 1px solid #777;
+                padding: .4rem 0;
+            }
+        }
     }
-    ol {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        list-style: none;
-        padding: 1rem;
-        li {
-            border-bottom: 1px solid #777;
-            padding: .4rem 0;
-            flex: 0 0 15%;
-        };
-    }
-
     nav {
         ul {
             list-style-type: none;

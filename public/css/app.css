@@ -18,18 +18,9 @@ body table thead {
   text-align: left;
 }
 
-body ol {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 1rem;
-}
-
-body ol li {
+body table tbody td {
   border-bottom: 1px solid #777;
   padding: 0.4rem 0;
-  flex: 0 0 15%;
 }
 
 body nav ul {
